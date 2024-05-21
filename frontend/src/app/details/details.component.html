@@ -1,0 +1,66 @@
+<div class="container-fluid mt-5 py-5">
+    <hr>
+    
+    
+    <h2 class="text-center mt-5  text-danger">Donors</h2>
+    
+    <div class="d-flex mt-5 justify-content-evenly" id="donor" >
+
+      
+      <input  type="text" name="searchKey" [(ngModel)]="searchKey" class="form-control  w-25"  placeholder="Search Blood Group" >
+      <button  routerLink="/users/add"  class="btn btn-outline-danger  " style="width: 300px;">
+        <i class="fa-solid fa-user-plus me-2 " ></i>Add a Doner
+      </button>
+      </div>
+
+    <div class="container mt-5 py-5">
+        <div class="row g-5">
+          <div class="col-4" *ngFor="let doners of allDoners | search:searchKey:'blood'">
+            
+           
+
+            <div class="card mb-3" style="max-width: 400px;">
+                <div class="row g-0" >
+                  <div class="col" >
+                    <img style="height: 240px;" [src]="doners.image" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col">
+                    <div class="card-body" style="background-color: rgb(233, 232, 232);">
+                        <ul  class="list-group list-group-flush shadow">
+                            <li class="list-group-item fw-bold">{{doners.id}}</li>
+                            <li class="list-group-item fw-bold">{{doners.name}}</li>
+                            <li class="list-group-item fw-bold ">{{doners.mobile}}</li>
+                            <li class="list-group-item fw-bold">{{doners.blood}}</li>
+                            
+                          </ul>
+                          
+                          <i routerLink="users/view/{{doners.id}}" class="fa-solid fa-eye fs-6 btn  mt-3 text-secondary"title='view'></i>
+                          <i routerLink="users/edit/{{doners.id}}"  class="fa-solid fa-pen-to-square btn  fs-6 mt-3 text-success"title='edit'></i>
+                          <i (click)="deleteDoner(doners.id)" class="fa-solid fa-trash-can btn fs-6 mt-3 text-danger"title='delete' ></i>
+                    
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+          </div>
+         
+           
+            
+
+            
+
+          </div>
+          
+        
+        
+
+          
+        </div>
+
+
+
+        
+    
+
+</div>

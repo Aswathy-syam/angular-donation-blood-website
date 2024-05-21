@@ -1,0 +1,33 @@
+<div style="margin-top:5%;">
+    <div class="text-center">
+       
+    <h4 class="py-3">Update Doner Detailes</h4>
+    </div>
+    
+    <div class="w-50 p-4 shadow mb-5 " style="margin-left: 25%; outline: 1px solid gainsboro; background-color: rgb(255, 223, 223);">
+    <!-- id -->
+    
+    <input class="form-control mb-4"  [(ngModel)]="doner.id" name="id" type="text" placeholder="id" aria-label="default input example" >
+    
+    <!-- name -->
+    <input class="form-control mb-4 "  [(ngModel)]="doner.name" name="name" type="text" placeholder="Enter your name" aria-label="default input example" >
+    
+    <!-- number -->
+    <input class="form-control mb-4"  [(ngModel)]="doner.mobile" name="mobile" type="text" placeholder="Enter your mobile number" aria-label="default input example" >
+    
+    <!-- blood -->
+    <input class="form-control mb-4"  [(ngModel)]="doner.blood" name="blood" type="text" placeholder="Enter your blood group" aria-label="default input example"  >
+    
+    <!-- image-->
+    <input class="form-control mb-4"  [(ngModel)]="doner.image" name="image" type="text" placeholder="Enter profile picture" aria-label="default input example"  >
+    
+    <!-- place -->
+<input class="form-control mb-4"  [(ngModel)]="doner.place" name="place" type="text" placeholder="Enter your place" aria-label="default input example"  >
+
+
+    <button type="button" (click)="getUpdatedoner()" class="btn btn-secondary w-25" style="margin-left: 35%;">Update</button>
+    
+    </div>
+    
+    </div>
+    

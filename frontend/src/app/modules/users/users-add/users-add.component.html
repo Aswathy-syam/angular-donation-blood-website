@@ -1,0 +1,55 @@
+
+
+
+<div style="margin-top:5%;">
+<div class="text-center">
+    <h3 class="text-danger mb-3 py-3">Donate Blood,Give The Gift of Life!</h3>
+<h4>Add New Doner</h4>
+</div>
+<form >
+   
+<div class="w-50 p-4 shadow mb-3 mt-3" style="margin-left: 25%; outline: 1px solid gainsboro; background-color: rgb(255, 223, 223);">
+
+     <!-- id -->
+<input class="form-control mb-4" [(ngModel)]="doner.id" name="id" type="text" placeholder="id" aria-label="default input example" >
+<!-- error msg for id-->
+ <!-- <div *ngIf="id.invalid && id.touched" class="mb-3 text-danger">invalid id</div> -->
+
+
+
+<!-- name -->
+
+<input class="form-control mb-4 "  [(ngModel)]="doner.name" name="name" type="text" placeholder="Enter your name" aria-label="default input example" >
+ <!-- error msg for name-->
+
+
+
+<!-- number -->
+
+<input class="form-control mb-4"  [(ngModel)]="doner.mobile" name="mobile" type="text" placeholder="Enter your mobile number" aria-label="default input example" >
+
+<!-- error msg for number-->
+<!-- <div *ngIf="mobile.invalid && mobile.touched" class="mb-3 text-danger">invalid mobile</div> -->
+
+
+<!-- blood grp -->
+<input class="form-control mb-4"  [(ngModel)]="doner.blood" name="blood" type="text" placeholder="Enter your blood group" aria-label="default input example"  >
+<!-- error msg for blood -->
+
+<!-- <div *ngIf="blood.invalid && blood.touched" class="mb-3 text-danger">invalid blood</div> -->
+
+
+
+<!-- image -->
+<input class="form-control mb-4"  [(ngModel)]="doner.image" name="image" type="text" placeholder="Enter profile picture" aria-label="default input example"  >
+<!-- error msg for image-->
+<!-- <div *ngIf="image.invalid && image.touched" class="mb-3 text-danger">invalid image</div> -->
+
+<!-- place -->
+<input class="form-control mb-4"  [(ngModel)]="doner.place" name="place" type="text" placeholder="Enter your place" aria-label="default input example"  >
+
+<button (click)="addDoners()" type="button" class="btn btn-success w-25" style="margin-left: 35%;">Add</button>
+
+</div>
+</form>
+</div>
